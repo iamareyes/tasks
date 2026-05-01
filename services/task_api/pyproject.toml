@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "task-api"
+version = "0.1.0"
+description = ""
+authors = ["Adolfo Reyes <adolfo0620@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.3"
+pytest-cov = "^7.1.0"
+black = "^26.3.1"
+isort = "^8.0.1"
+flake8 = "^7.3.0"
+bandit = "^1.9.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
