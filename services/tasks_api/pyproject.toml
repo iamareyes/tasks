@@ -6,8 +6,19 @@ authors = ["Adolfo Reyes <adolfo0620@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.10"
+fastapi = "^0.136.1"
+uvicorn = "^0.46.0"
+httpx = "^0.28.1"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.3"
+pytest-cov = "^7.1.0"
+black = "^26.3.1"
+isort = "^8.0.1"
+flake8 = "^7.3.0"
+bandit = "^1.9.4"
 
 [build-system]
 requires = ["poetry-core"]
