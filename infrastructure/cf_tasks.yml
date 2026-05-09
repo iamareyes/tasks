@@ -90,7 +90,7 @@ Resources:
                       -
                         - 'origin-access-identity/cloudfront/'
                         - Ref: CloudFrontOriginAccessIdentity
-          - DomainName: https://u5ajtwa0xe.execute-api.us-east-2.amazonaws.com/
+          - DomainName: u5ajtwa0xe.execute-api.us-east-2.amazonaws.com/
             Id: api
             OriginPath: /development
             CustomOriginConfig:
