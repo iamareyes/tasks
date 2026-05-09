@@ -10,7 +10,7 @@ Resources:
     Type: AWS::Route53::HostedZone
     Properties:
       HostedZoneConfig:
-        HostedZoneConfig
+        Comment: "HostedZoneConfig"
       Name:
         Ref: Domain
   CloudFrontOriginAccessIdentity:  # new
