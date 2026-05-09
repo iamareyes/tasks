@@ -80,7 +80,7 @@ Resources:
           - DomainName:
               Fn::Join:
                 - '.'
-                - - Fn::ImportValue: s3-development-tasks-api-name
+                - - Fn::ImportValue: s3-development-tasks-api-ar-name
                   - 's3.amazonaws.com'
             Id: vueApp
             S3OriginConfig:
