@@ -39,7 +39,9 @@ def health_check():
     return {"message": "OK"}
 
 
-@app.post("/api/create-task", response_model=APITask, status_code=status.HTTP_201_CREATED)
+@app.post(
+    "/api/create-task", response_model=APITask, status_code=status.HTTP_201_CREATED
+)
 def create_task(
     parameters: CreateTask,
     user_email: str = Depends(get_user_email),
@@ -49,6 +51,7 @@ def create_task(
     task_store.add(task)
 
     return task
+
 
 @app.get("/api/open-tasks", response_model=APITaskList)
 def open_tasks(
@@ -69,5 +72,6 @@ def close_task(
     task_store.add(task)
 
     return task
+
 
 handle = Mangum(app)
