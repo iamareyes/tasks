@@ -1,7 +1,7 @@
-import jwt
 import uuid
 
 import boto3
+import jwt
 import pytest
 from fastapi import status
 from moto import mock_aws

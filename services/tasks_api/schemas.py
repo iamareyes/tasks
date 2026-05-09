@@ -2,7 +2,7 @@ from uuid import UUID
 
 from pydantic import BaseModel
 
-from models import TaskStatus, Task
+from models import Task, TaskStatus
 
 
 class CreateTask(BaseModel):
