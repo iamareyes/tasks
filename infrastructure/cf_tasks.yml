@@ -22,7 +22,7 @@ Resources:
     Type: AWS::S3::BucketPolicy
     Properties:
       Bucket:
-        Fn::ImportValue: s3-development-tasks-api-name
+        Fn::ImportValue: s3-development-tasks-api-ar-name
       PolicyDocument:
         Version: "2012-10-17"
         Statement:
@@ -33,7 +33,7 @@ Resources:
             Resource:
               Fn::Join:
                 - '/'
-                - - Fn::ImportValue: s3-development-tasks-api-arn
+                - - Fn::ImportValue: s3-development-tasks-api-ar-arn
                   - '*'
   APICachePolicy:  # new
     Type: AWS::CloudFront::CachePolicy
