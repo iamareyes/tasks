@@ -77,7 +77,11 @@ Resources:
     Properties:
       DistributionConfig:
         Origins:
-          - DomainName: development-tasks-api-ar.s3.amazonaws.com
+          - DomainName: 
+              Fn::Join:
+                - '.'
+                - - Fn::ImportValue: s3-development-tasks-api-ar-name
+                  - 's3.amazonaws.com'
             Id: vueApp
             S3OriginConfig:
               OriginAccessIdentity:
@@ -86,7 +90,7 @@ Resources:
                       -
                         - 'origin-access-identity/cloudfront/'
                         - Ref: CloudFrontOriginAccessIdentity
-          - DomainName: u5ajtwa0xe.execute-api.us-east-2.amazonaws.com/
+          - DomainName: u5ajtwa0xe.execute-api.us-east-2.amazonaws.com
             Id: api
             OriginPath: /development
             CustomOriginConfig:
