@@ -81,7 +81,7 @@ Resources:
               Fn::Join:
                 - '.'
                 - - Fn::ImportValue: s3-development-tasks-api-ar-name
-                  - 's3.amazonaws.com'
+                  - 's3-website.us-east-2.amazonaws.com'
             Id: vueApp
             S3OriginConfig:
               OriginAccessIdentity:
@@ -131,12 +131,12 @@ Resources:
           AcmCertificateArn: arn:aws:acm:us-east-1:471112553677:certificate/2195d379-531d-4087-b6a0-98bac8459377
           SslSupportMethod: sni-only
           MinimumProtocolVersion: TLSv1.2_2021
-  CloudFrontDNSRecord:  # new
+  CloudFrontDNSRecord:
     Type: AWS::Route53::RecordSet
     Properties:
       AliasTarget:
         DNSName: !GetAtt TasksCloudFront.DomainName
-        HostedZoneId: Z2FDTNDATAQYW2  # See docs for more details https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html
+        HostedZoneId: Z2FDTNDATAQYW2 
       HostedZoneId:
         Ref: TasksHostedZone
       Name:
